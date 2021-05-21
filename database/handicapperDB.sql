@@ -59,3 +59,5 @@ CREATE TABLE Round
 	CONSTRAINT pk_roundId PRIMARY KEY(roundId)
 );
 
+ALTER TABLE Round ADD CONSTRAINT fk_user_Id FOREIGN KEY(user_id) REFERENCES Users(userId);
+ALTER TABLE Round ADD CONSTRAINT fk_course_id FOREIGN KEY(course_id) REFERENCES Course(courseId);
